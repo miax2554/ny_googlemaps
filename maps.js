@@ -2,6 +2,7 @@ window.addEventListener("load", initMap);
 
 var map;
 
+
 function initMap() {
 	console.log("Hej med dig");
 	var myLatLng = {
@@ -24,7 +25,6 @@ function initMap() {
 		lng: 12.541411
 	};
 
-
 	var map = new google.maps.Map(document.getElementById("map"), {
 		zoom: 18,
 		center: myLatLng
@@ -36,13 +36,13 @@ function initMap() {
 		map: map,
 		title: "Her ligger KEA"
 
-
 	});
 
-	var marker = new google.maps.Marker({
+
+	var marker2 = new google.maps.Marker({
 		position: myLatLng2,
 		map: map,
-		title: "Her ligger Netto"
+		title: "Her ligger Netto",
 	});
 
 	var marker = new google.maps.Marker({
@@ -60,9 +60,15 @@ function initMap() {
 	});
 
 	marker1.addListener('click', function () {
-		console.log("er klikket på");
-		map.setZoom(25);
+		map.setZoom(15);
 		map.setCenter(marker.getPosition());
+		infowindow.open(map, marker1);
 	});
 
+	//inforwindow
+	var infowindow = new google.maps.InfoWindow({
+		content: "Her kan du gå i skole, hvis du har lyst",
+		position: (myLatLng2)
+
+	})
 }
