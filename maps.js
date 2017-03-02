@@ -3,6 +3,7 @@ window.addEventListener("load", initMap);
 var map;
 
 
+
 function initMap() {
 	console.log("Hej med dig");
 	var myLatLng = {
@@ -31,7 +32,7 @@ function initMap() {
 	});
 
 
-	var marker1 = new google.maps.Marker({
+	var marker = new google.maps.Marker({
 		position: myLatLng,
 		map: map,
 		title: "Her ligger KEA"
@@ -39,7 +40,7 @@ function initMap() {
 	});
 
 
-	var marker2 = new google.maps.Marker({
+	var marker = new google.maps.Marker({
 		position: myLatLng2,
 		map: map,
 		title: "Her ligger Netto",
@@ -59,16 +60,25 @@ function initMap() {
 		icon: 'tog.png'
 	});
 
-	marker1.addListener('click', function () {
-		map.setZoom(15);
-		map.setCenter(marker.getPosition());
-		infowindow.open(map, marker1);
-	});
-
-	//inforwindow
 	var infowindow = new google.maps.InfoWindow({
 		content: "Her kan du gå i skole, hvis du har lyst",
-		position: (myLatLng2)
+
 
 	})
+
+	marker.addListener('click', clickOnMarker);
+
+
+	function clickOnMarker() {
+		console.log("Der blive zoomet og der står ikke noget i boksen");
+		map.setZoom(20);
+		map.setCenter(myLatLng);
+		var klon = document.querySelector("#tekst").content.cloneNode(true);
+		//var tekst = document.querySelector("#tekst");
+		infowindow.setContent(klon);
+		infowindow.open(map, marker);
+	}
+
+
+
 }
