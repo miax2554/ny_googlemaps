@@ -1,0 +1,39 @@
+ [
+ 	{
+ 		"id": "kea",
+
+ 		"position": {
+ 			"lat": 55.706373,
+ 			"lng": 12.539311
+ 		},
+ 		"hvad": "Københavns",
+ 		"hvem": "Alle",
+ 		"hvor": "Lygten",
+ 		"icon": "images/kea.jpg"
+        },
+
+ 	{
+ 		"id": "netto",
+
+ 		"position": {
+ 			"lat": 55.707393,
+ 			"lng": 12.538121
+ 		},
+ 		"hvad": "Indkøbscenter",
+ 		"hvem": "Alle der mangler mad",
+ 		"hvor": "Lige over for KEA",
+ 		"icon": "images/netto.png"
+        },
+ 	{
+ 		"id": "lidl",
+
+ 		"position": {
+ 			"lat": 55.706486,
+ 			"lng": 12.538196
+ 		},
+ 		"hvad": "Indkøbscenter",
+ 		"hvem": "Det er godt sted for alle, der mangler frokost",
+ 		"hvor": "Lige over for KEA",
+ 		"icon": "images/lidl.png"
+        }
+ ]

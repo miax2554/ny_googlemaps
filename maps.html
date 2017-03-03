@@ -9,11 +9,22 @@
 </head>
 
 <body>
-	<template id="tekst">Den her tekst skal stå i vinduet</template>
-	<div id="map"></div>
+	<template id="tekst">
+		<div class=data_icon>
+			<img src="images/lidl.png" alt="hej">
+		</div>
 
+
+		<h3> Hvad: <span class=data_hvad>HVAD</span></h3>
+		<br> Hvem: <span class=data_hvem>HVEM</span>
+		<br> Hvor: <span class=data_hvor>HVOR</span>
+
+	</template>
+	<div id="map"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
+	<script src="map.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYOcMztmzbanZJq-BQpn76umWNPbbxRdQ&callback=initMap" async defer></script>
-	<script src="maps.js"></script>
+
 </body>
 
 </html>
